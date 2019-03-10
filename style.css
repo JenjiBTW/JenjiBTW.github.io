@@ -1,0 +1,110 @@
+h1 {
+    display: inline-block;
+    font-size: 60px;
+    top: 50%;
+    font-family: "Courier New", Courier, monospace;
+    color: orangered;
+    text-align: center;
+    padding: auto;
+    margin: auto;
+}
+#title{
+    display:block;
+    position:absolute;
+    left:45%;
+}
+header {
+    background-color: black;
+    height: 70px;
+}
+#links {
+    display: inline-block;
+    float: right;
+    margin-right:100px;
+    width:300px;
+}
+body
+{
+ margin: 0;
+ padding: 0;
+ background-image: url("Retro 80s.jpg");
+ background-color: black;
+
+}
+p {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: white;
+}
+.img-box {
+    margin: auto;
+    width:50%;
+}
+img {
+    
+}
+.text-box{
+    position:relative;
+    background: rgba(200,200,200,0.2);
+    width: 60%;
+    margin:auto;
+    padding:20px;
+}
+a{
+display:inline;
+ right:0%;
+ transform: translate(-50%, -50%);
+ height: 30px;
+ text-align: center;
+ line-height: 60px;
+ color: #fff;
+ font-size: 1em;
+ text-transform: uppercase;
+ text-decoration: none;
+ font-family: sans-serif;
+ box-sizing: border-box;
+ background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+ background-size: 400%;
+ border-radius: 30px;
+ padding:10px;
+margin:10px;
+ z-index: 1;
+}
+a:hover
+{
+ animation: animate 5s linear infinite;
+}
+@keyframes animate
+{
+ 0%
+ {
+  background-position: 0%;
+ }
+ 100%
+ {
+  background-position: 400%;
+ }
+}
+a:before
+{
+ content: '';
+ position: relative;
+ top: -5px;
+ left: -5px;
+ right: -5px;
+ bottom: -5px;
+ z-index: -1;
+ background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+ background-size: 400%;
+ border-radius: 40px;
+ opacity: 0;
+ transition: 0.5s;
+
+ 
+}
+a:hover:before
+{
+ 
+ filter: blur(20px);
+ opacity:1;
+ animation: animate 5s linear infinite;
+}﻿
