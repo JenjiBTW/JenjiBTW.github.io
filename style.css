@@ -69,10 +69,10 @@ display:inline;
 margin:10px;
  z-index: 1;
 }
-a:hover
-{
- animation: animate 5s linear infinite;
-}
+a:hover {
+        text-decoration: underline;
+        animation: animate 5s linear infinite;
+    }
 @keyframes animate
 {
  0%
