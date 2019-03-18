@@ -8,28 +8,33 @@ h1 {
     padding: auto;
     margin: auto;
 }
-#title{
-    display:block;
-    position:absolute;
-    left:45%;
-}
 header {
+    display: block;
     background-color: black;
     height: 70px;
+    width: 100%;
 }
-#links {
-    display: inline-block;
-    float: right;
-    margin-right:100px;
-    width:300px;
-}
-body
-{
- margin: 0;
- padding: 0;
- background-image: url("Retro 80s.jpg");
- background-color: black;
 
+#title {
+    text-align:center;
+    display: inline-block;
+    width: 19%;
+    margin: auto;
+}
+
+#links {
+    float:right;
+    display: inline-block;
+    width: 39%;
+    margin: auto;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("Retro 80s.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
 }
 p {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -49,29 +54,28 @@ img {
     margin:auto;
     padding:20px;
 }
-a{
-display:inline;
- right:0%;
- transform: translate(-50%, -50%);
- height: 30px;
- text-align: center;
- line-height: 60px;
- color: #fff;
- font-size: 1em;
- text-transform: uppercase;
- text-decoration: none;
- font-family: sans-serif;
- box-sizing: border-box;
- background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
- background-size: 400%;
- border-radius: 30px;
- padding:10px;
-margin:10px;
- z-index: 1;
+a {
+    display: inline;
+    right: 0%;
+    height: 30px;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 4vh;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Impact, Charcoal, sans-serif;
+    box-sizing: border-box;
+    /*background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+ background-size: 400%;*/
+    border-radius: 30px;
+    padding: 10px;
+    z-index: 1;
 }
-a:hover {
+    a:hover {
         text-decoration: underline;
-        animation: animate 5s linear infinite;
+        /* animation: animate 5s linear infinite; */
+        color: #00FF33;
     }
 @keyframes animate
 {
@@ -88,12 +92,6 @@ a:before
 {
  content: '';
  position: relative;
- top: -5px;
- left: -5px;
- right: -5px;
- bottom: -5px;
- z-index: -1;
- background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
  background-size: 400%;
  border-radius: 40px;
  opacity: 0;
@@ -107,4 +105,21 @@ a:hover:before
  filter: blur(20px);
  opacity:1;
  animation: animate 5s linear infinite;
-}﻿
+}
+﻿
+footer {
+    position: absolute;
+    bottom:0%;
+    background-color: black;
+    width: 100%;
+}
+
+#aboutme {
+    text-align: center;
+    bottom: 0%;
+    width: 100%;
+    height: 70px;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
