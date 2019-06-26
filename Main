@@ -1,0 +1,807 @@
+<html>
+<head>
+    <title>Shoobie SS</title>
+</head>
+<body>
+        <pre style="word-wrap: break-word; white-space: pre-wrap;">
+        print("GAY YOU!")
+
+
+        local ShoobieSS = Instance.new("ScreenGui")
+        local Main = Instance.new("ImageLabel")
+        local Panel = Instance.new("TextLabel")
+        local Executor = Instance.new("TextButton")
+        local Scripts = Instance.new("TextButton")
+        local X = Instance.new("TextButton")
+        local Close = Instance.new("TextButton")
+        local CoolThing = Instance.new("TextLabel")
+        local Frame = Instance.new("ScrollingFrame")
+        local ScriptTab = Instance.new("Frame")
+        local ExecutorTab = Instance.new("Frame")
+        local Editor = Instance.new("ScrollingFrame")
+        local Box = Instance.new("TextBox")
+        local Comments_ = Instance.new("TextLabel")
+        local Globals_ = Instance.new("TextLabel")
+        local Keywords_ = Instance.new("TextLabel")
+        local Numbers_ = Instance.new("TextLabel")
+        local RemoteHighlight_ = Instance.new("TextLabel")
+        local Strings_ = Instance.new("TextLabel")
+        local Tokens_ = Instance.new("TextLabel")
+        local Lines = Instance.new("TextLabel")
+        local Execute = Instance.new("TextButton")
+        local Clear = Instance.new("TextButton")
+        local Open = Instance.new("TextButton")
+        --Properties:
+        ShoobieSS.Name = "ShoobieSS"
+        ShoobieSS.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+        ShoobieSS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+        ShoobieSS.ResetOnSpawn = false
+        
+        Main.Name = "Main"
+        Main.Parent = ShoobieSS
+        Main.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+        Main.BackgroundTransparency = 1
+        Main.Position = UDim2.new(0.331999987, 0, 0.321999997, 0)
+        Main.Size = UDim2.new(0, 553, 0, 289)
+        Main.Image = "rbxassetid://2790389767"
+        Main.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+        Main.ScaleType = Enum.ScaleType.Slice
+        Main.SliceCenter = Rect.new(8, 8, 248, 248)
+        
+        Panel.Name = "Panel"
+        Panel.Parent = Main
+        Panel.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+        Panel.BorderSizePixel = 0
+        Panel.Size = UDim2.new(0, 553, 0, 21)
+        Panel.Font = Enum.Font.Code
+        Panel.Text = "Shoobie SS"
+        Panel.TextColor3 = Color3.new(0, 1, 0.45098)
+        Panel.TextSize = 16
+        Panel.TextWrapped = true
+        
+        Executor.Name = "Executor"
+        Executor.Parent = Main
+        Executor.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+        Executor.BorderSizePixel = 0
+        Executor.Size = UDim2.new(0, 60, 0, 21)
+        Executor.AutoButtonColor = false
+        Executor.Font = Enum.Font.SourceSans
+        Executor.Text = "Executor"
+        Executor.TextColor3 = Color3.new(1, 1, 1)
+        Executor.TextSize = 14
+        
+        Scripts.Name = "Scripts"
+        Scripts.Parent = Main
+        Scripts.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+        Scripts.BorderSizePixel = 0
+        Scripts.Position = UDim2.new(0.108499095, 0, 0, 0)
+        Scripts.Size = UDim2.new(0, 60, 0, 21)
+        Scripts.AutoButtonColor = false
+        Scripts.Font = Enum.Font.SourceSans
+        Scripts.Text = "Scripts"
+        Scripts.TextColor3 = Color3.new(1, 1, 1)
+        Scripts.TextSize = 14
+        
+        X.Name = "X"
+        X.Parent = Main
+        X.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+        X.BorderSizePixel = 0
+        X.Position = UDim2.new(0.94755888, 0, 0, 0)
+        X.Size = UDim2.new(0, 29, 0, 21)
+        X.AutoButtonColor = false
+        X.Font = Enum.Font.SourceSans
+        X.Text = "X"
+        X.TextColor3 = Color3.new(1, 1, 1)
+        X.TextSize = 16
+        
+        Close.Name = "Close"
+        Close.Parent = Main
+        Close.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+        Close.BorderSizePixel = 0
+        Close.Position = UDim2.new(0.8951177, 0, 0, 0)
+        Close.Size = UDim2.new(0, 29, 0, 21)
+        Close.AutoButtonColor = false
+        Close.Font = Enum.Font.SourceSans
+        Close.Text = "-"
+        Close.TextColor3 = Color3.new(1, 1, 1)
+        Close.TextSize = 20
+        
+        CoolThing.Name = "CoolThing"
+        CoolThing.Parent = Main
+        CoolThing.BackgroundColor3 = Color3.new(1, 1, 1)
+        CoolThing.BorderSizePixel = 0
+        CoolThing.Size = UDim2.new(0, 60, 0, 2)
+        CoolThing.Font = Enum.Font.SourceSans
+        CoolThing.Text = ""
+        CoolThing.TextColor3 = Color3.new(0, 0, 0)
+        CoolThing.TextSize = 14
+        
+        Frame.Name = "Frame"
+        Frame.Parent = ShoobieSS
+        Frame.BackgroundColor3 = Color3.new(1, 1, 1)
+        Frame.BackgroundTransparency = 1
+        Frame.BorderSizePixel = 0
+        Frame.Position = UDim2.new(0.331999987, 0, 0.361000001, 0)
+        Frame.Size = UDim2.new(0, 552, 0, 237)
+        Frame.ScrollBarThickness = 0
+        
+        ScriptTab.Name = "ScriptTab"
+        ScriptTab.Parent = Frame
+        ScriptTab.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+        ScriptTab.BorderSizePixel = 0
+        ScriptTab.Position = UDim2.new(1.01300001, 0, 0.00400000019, 0)
+        ScriptTab.Size = UDim2.new(0, 539, 0, 227)
+        
+        ExecutorTab.Name = "ExecutorTab"
+        ExecutorTab.Parent = Frame
+        ExecutorTab.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+        ExecutorTab.BorderSizePixel = 0
+        ExecutorTab.Position = UDim2.new(0.0130000003, 0, 0.00400000019, 0)
+        ExecutorTab.Size = UDim2.new(0, 539, 0, 227)
+        
+        Editor.Name = "Editor"
+        Editor.Parent = ExecutorTab
+        Editor.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+        Editor.BorderColor3 = Color3.new(0, 1, 0.45098)
+        Editor.BorderSizePixel = 0
+        Editor.Position = UDim2.new(0, 0, -0.000673537725, 0)
+        Editor.Size = UDim2.new(0, 539, 0, 198)
+        Editor.ZIndex = 3
+        Editor.CanvasSize = UDim2.new(0, 0, 0, 70000)
+        Editor.ScrollBarThickness = 5
+        
+        Box.Name = "Box"
+        Box.Parent = Editor
+        Box.BackgroundColor3 = Color3.new(0.223529, 0.223529, 0.223529)
+        Box.BackgroundTransparency = 1
+        Box.BorderSizePixel = 0
+        Box.Position = UDim2.new(0, 36, 0, 0)
+        Box.Size = UDim2.new(0.934451222, 0, 158.75708, 0)
+        Box.ZIndex = 3
+        Box.ClearTextOnFocus = false
+        Box.Font = Enum.Font.Code
+        Box.MultiLine = true
+        Box.PlaceholderColor3 = Color3.new(0.8, 0.8, 0.8)
+        Box.Text = "Made By A Shiba Inu#4186\nCredits: Coldnight#8060 for the Syntax Hightlight and Smooth Drag!"
+        Box.TextColor3 = Color3.new(1, 1, 1)
+        Box.TextSize = 15
+        Box.TextXAlignment = Enum.TextXAlignment.Left
+        Box.TextYAlignment = Enum.TextYAlignment.Top
+        
+        Comments_.Name = "Comments_"
+        Comments_.Parent = Box
+        Comments_.BackgroundColor3 = Color3.new(1, 1, 1)
+        Comments_.BackgroundTransparency = 1
+        Comments_.ClipsDescendants = true
+        Comments_.Size = UDim2.new(1, 0, 1, 0)
+        Comments_.ZIndex = 5
+        Comments_.Font = Enum.Font.Code
+        Comments_.Text = ""
+        Comments_.TextColor3 = Color3.new(0.337255, 0.337255, 0.337255)
+        Comments_.TextSize = 15
+        Comments_.TextWrapped = true
+        Comments_.TextXAlignment = Enum.TextXAlignment.Left
+        Comments_.TextYAlignment = Enum.TextYAlignment.Top
+        
+        Globals_.Name = "Globals_"
+        Globals_.Parent = Box
+        Globals_.BackgroundColor3 = Color3.new(1, 1, 1)
+        Globals_.BackgroundTransparency = 1
+        Globals_.ClipsDescendants = true
+        Globals_.Size = UDim2.new(1, 0, 1, 0)
+        Globals_.ZIndex = 5
+        Globals_.Font = Enum.Font.Code
+        Globals_.Text = ""
+        Globals_.TextColor3 = Color3.new(0.701961, 0.580392, 1)
+        Globals_.TextSize = 15
+        Globals_.TextWrapped = true
+        Globals_.TextXAlignment = Enum.TextXAlignment.Left
+        Globals_.TextYAlignment = Enum.TextYAlignment.Top
+        
+        Keywords_.Name = "Keywords_"
+        Keywords_.Parent = Box
+        Keywords_.BackgroundColor3 = Color3.new(1, 1, 1)
+        Keywords_.BackgroundTransparency = 1
+        Keywords_.ClipsDescendants = true
+        Keywords_.Size = UDim2.new(1, 0, 1, 0)
+        Keywords_.ZIndex = 5
+        Keywords_.Font = Enum.Font.Code
+        Keywords_.Text = ""
+        Keywords_.TextColor3 = Color3.new(1, 0.486275, 0.486275)
+        Keywords_.TextSize = 15
+        Keywords_.TextWrapped = true
+        Keywords_.TextXAlignment = Enum.TextXAlignment.Left
+        Keywords_.TextYAlignment = Enum.TextYAlignment.Top
+        
+        Numbers_.Name = "Numbers_"
+        Numbers_.Parent = Box
+        Numbers_.BackgroundColor3 = Color3.new(1, 1, 1)
+        Numbers_.BackgroundTransparency = 1
+        Numbers_.ClipsDescendants = true
+        Numbers_.Size = UDim2.new(1, 0, 1, 0)
+        Numbers_.ZIndex = 4
+        Numbers_.Font = Enum.Font.Code
+        Numbers_.Text = ""
+        Numbers_.TextColor3 = Color3.new(1, 0.760784, 0.34902)
+        Numbers_.TextSize = 15
+        Numbers_.TextWrapped = true
+        Numbers_.TextXAlignment = Enum.TextXAlignment.Left
+        Numbers_.TextYAlignment = Enum.TextYAlignment.Top
+        
+        RemoteHighlight_.Name = "RemoteHighlight_"
+        RemoteHighlight_.Parent = Box
+        RemoteHighlight_.BackgroundColor3 = Color3.new(1, 1, 1)
+        RemoteHighlight_.BackgroundTransparency = 1
+        RemoteHighlight_.ClipsDescendants = true
+        RemoteHighlight_.Size = UDim2.new(1, 0, 1, 0)
+        RemoteHighlight_.ZIndex = 5
+        RemoteHighlight_.Font = Enum.Font.Code
+        RemoteHighlight_.Text = ""
+        RemoteHighlight_.TextColor3 = Color3.new(0.0470588, 1, 0.796079)
+        RemoteHighlight_.TextSize = 15
+        RemoteHighlight_.TextWrapped = true
+        RemoteHighlight_.TextXAlignment = Enum.TextXAlignment.Left
+        RemoteHighlight_.TextYAlignment = Enum.TextYAlignment.Top
+        
+        Strings_.Name = "Strings_"
+        Strings_.Parent = Box
+        Strings_.BackgroundColor3 = Color3.new(1, 1, 1)
+        Strings_.BackgroundTransparency = 1
+        Strings_.ClipsDescendants = true
+        Strings_.Size = UDim2.new(1, 0, 1, 0)
+        Strings_.ZIndex = 5
+        Strings_.Font = Enum.Font.Code
+        Strings_.Text = ""
+        Strings_.TextColor3 = Color3.new(0.788235, 1, 0.654902)
+        Strings_.TextSize = 15
+        Strings_.TextWrapped = true
+        Strings_.TextXAlignment = Enum.TextXAlignment.Left
+        Strings_.TextYAlignment = Enum.TextYAlignment.Top
+        
+        Tokens_.Name = "Tokens_"
+        Tokens_.Parent = Box
+        Tokens_.BackgroundColor3 = Color3.new(1, 1, 1)
+        Tokens_.BackgroundTransparency = 1
+        Tokens_.ClipsDescendants = true
+        Tokens_.Size = UDim2.new(1, 0, 1, 0)
+        Tokens_.ZIndex = 5
+        Tokens_.Font = Enum.Font.Code
+        Tokens_.Text = ""
+        Tokens_.TextColor3 = Color3.new(1, 1, 1)
+        Tokens_.TextSize = 15
+        Tokens_.TextWrapped = true
+        Tokens_.TextXAlignment = Enum.TextXAlignment.Left
+        Tokens_.TextYAlignment = Enum.TextYAlignment.Top
+        
+        Lines.Name = "Lines"
+        Lines.Parent = Editor
+        Lines.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+        Lines.BackgroundTransparency = 1
+        Lines.BorderColor3 = Color3.new(0.34902, 0.34902, 0.34902)
+        Lines.Size = UDim2.new(0, 30, 1, 1000000)
+        Lines.ZIndex = 4
+        Lines.Font = Enum.Font.Code
+        Lines.Text = "1"
+        Lines.TextColor3 = Color3.new(0.415686, 0.415686, 0.415686)
+        Lines.TextSize = 15
+        Lines.TextYAlignment = Enum.TextYAlignment.Top
+        
+        Execute.Name = "Execute"
+        Execute.Parent = ExecutorTab
+        Execute.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
+        Execute.BorderColor3 = Color3.new(0, 1, 0.45098)
+        Execute.Position = UDim2.new(0.0129870223, 0, 0.889194429, 0)
+        Execute.Size = UDim2.new(0, 98, 0, 20)
+        Execute.AutoButtonColor = false
+        Execute.Font = Enum.Font.Arcade
+        Execute.Text = "Execute"
+        Execute.TextColor3 = Color3.new(0, 1, 0.45098)
+        Execute.TextSize = 14
+        
+        Clear.Name = "Clear"
+        Clear.Parent = ExecutorTab
+        Clear.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
+        Clear.BorderColor3 = Color3.new(0, 1, 0.45098)
+        Clear.Position = UDim2.new(0.207792118, 0, 0.889194429, 0)
+        Clear.Size = UDim2.new(0, 98, 0, 20)
+        Clear.AutoButtonColor = false
+        Clear.Font = Enum.Font.Arcade
+        Clear.Text = "Clear"
+        Clear.TextColor3 = Color3.new(0, 1, 0.45098)
+        Clear.TextSize = 14
+        
+        Open.Name = "Open"
+        Open.Parent = ShoobieSS
+        Open.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+        Open.Position = UDim2.new(0, 0, 0.957002461, 0)
+        Open.Size = UDim2.new(0, 138, 0, 35)
+        Open.AutoButtonColor = false
+        Open.Font = Enum.Font.SourceSans
+        Open.Text = "Open"
+        Open.TextColor3 = Color3.new(1, 1, 1)
+        Open.TextSize = 14
+        -- Scripts:
+        function SCRIPT_DIYH81_FAKESCRIPT() -- ShoobieSS.Main 
+            local script = Instance.new('LocalScript')
+            script.Parent = ShoobieSS
+            local ExecutorTab = script.Parent.Frame.ExecutorTab
+            local ScriptTab = script.Parent.Frame.ScriptTab
+            local Executor = script.Parent.Main.Executor
+            local Scripts = script.Parent.Main.Scripts
+            local Destroy = script.Parent.Main.X
+            local Close = script.Parent.Main.Close
+            local CoolThing = script.Parent.Main.CoolThing
+            local Frame = script.Parent.Frame
+            local Main = script.Parent.Main
+            local UserId = game.Players.LocalPlayer.UserId
+            local Execute = script.Parent.Frame.ExecutorTab.Execute
+            local Clear = script.Parent.Frame.ExecutorTab.Clear
+            local Open = script.Parent.Open
+            Open.Visible = false
+            Frame.Visible = false
+            Main.Visible = false
+            if UserId == 926856917 then
+                Frame.Visible = true
+                Main.Visible = true
+                
+            end
+            
+            Scripts.MouseButton1Down:Connect(function()
+                Scripts.BackgroundColor3 = Color3.fromRGB(40,40,40)
+                            Executor.BackgroundColor3 = Color3.fromRGB(50,50,50)
+                CoolThing:TweenPosition(UDim2.new(0.108, 0,0, 0),'InOut', 'Sine', 0, true)
+                    ScriptTab:TweenPosition(UDim2.new(0.013, 0,0.004, 0),'InOut', 'Quint', 0.7, true)
+                        ExecutorTab:TweenPosition(UDim2.new(-1.013, 0,0.004, 0),'InOut', 'Quint', 0.7, true)
+            end)
+            Executor.MouseButton1Down:Connect(function()
+                    Scripts.BackgroundColor3 = Color3.fromRGB(50,50,50)
+                            Executor.BackgroundColor3 = Color3.fromRGB(40,40,40)
+                CoolThing:TweenPosition(UDim2.new(0,0,0,0),'InOut', 'Sine', 0, true)
+                    ScriptTab:TweenPosition(UDim2.new(1.013, 0,0.004, 0),'InOut', 'Quint', 0.7, true)
+                        ExecutorTab:TweenPosition(UDim2.new(0.013, 0,0.004, 0),'InOut', 'Quint', 0.7, true)
+            end)
+            
+            Destroy.MouseEnter:Connect(function()
+                    game:GetService("TweenService"):Create(Destroy, TweenInfo.new(0.4), {
+                    ['BackgroundColor3'] = Color3.fromRGB(40, 40, 40);
+                    }):Play();
+                                game:GetService("TweenService"):Create(Destroy, TweenInfo.new(0.4), {
+                    ['TextColor3'] = Color3.fromRGB(255, 0, 0);
+                }):Play();
+                
+            end)
+            Destroy.MouseLeave:Connect(function()
+                    game:GetService("TweenService"):Create(Destroy, TweenInfo.new(0.1), {
+                    ['BackgroundColor3'] = Color3.fromRGB(50, 50, 50);
+                    }):Play();
+                                game:GetService("TweenService"):Create(Destroy, TweenInfo.new(0.1), {
+                    ['TextColor3'] = Color3.fromRGB(255, 255, 255);
+                }):Play();
+                
+            end)
+            Close.MouseEnter:Connect(function()
+                    game:GetService("TweenService"):Create(Close, TweenInfo.new(0.2), {
+                    ['BackgroundColor3'] = Color3.fromRGB(40, 40, 40);
+                }):Play();
+            end)
+            Close.MouseLeave:Connect(function()
+                    game:GetService("TweenService"):Create(Close, TweenInfo.new(0.2), {
+                    ['BackgroundColor3'] = Color3.fromRGB(50, 50, 50);
+                }):Play();
+            end)
+            
+            Close.MouseButton1Down:Connect(function()
+                    Main:TweenPosition(UDim2.new(0.332, 0,0.250, 0),'InOut','Sine',0.5,true)
+                    Frame:TweenPosition(UDim2.new(0.332, 0,0.300, 0),'InOut','Sine',0.5,true)
+                    wait(0.5)
+                Main:TweenPosition(UDim2.new(0.332, 0,1.322, 0),'InOut','Sine',1,true)
+                    Frame:TweenPosition(UDim2.new(0.332, 0,1.361, 0),'InOut','Sine',1,true)
+                    wait(1)
+                    Open.Visible = false
+            end)
+            
+            
+            Clear.MouseEnter:Connect(function()
+                            game:GetService("TweenService"):Create(Clear, TweenInfo.new(0.2), {
+                    ['BackgroundColor3'] = Color3.fromRGB(100,100,100);
+                }):Play();
+            end)
+            
+            Clear.MouseLeave:Connect(function()
+                            game:GetService("TweenService"):Create(Clear, TweenInfo.new(0.2), {
+                    ['BackgroundColor3'] = Color3.fromRGB(60,60,60);
+                }):Play();
+            end)
+            
+            Execute.MouseEnter:Connect(function()
+                            game:GetService("TweenService"):Create(Execute, TweenInfo.new(0.2), {
+                    ['BackgroundColor3'] = Color3.fromRGB(100,100,100);
+                }):Play();
+            end)
+            
+            Execute.MouseLeave:Connect(function()
+                            game:GetService("TweenService"):Create(Execute, TweenInfo.new(0.2), {
+                    ['BackgroundColor3'] = Color3.fromRGB(60,60,60);
+                }):Play();
+            end)
+            
+            Destroy.MouseButton1Down:Connect(function()
+                Frame:Destroy()
+                Main:Destroy()
+                script.Parent:Destroy()
+            end)
+            
+            Open.MouseButton1Down:Connect(function()
+                Main:TweenPosition(UDim2.new(0.332, 0,0.322, 0),'Out','Quint',1,true)
+                Frame:TweenPosition(UDim2.new(0.332, 0,0.361, 0),'Out','Quint',1,true)
+                Open.Visible = false
+            end)
+        
+        end
+        coroutine.resume(coroutine.create(SCRIPT_DIYH81_FAKESCRIPT))
+        function SCRIPT_MSCX89_FAKESCRIPT() -- ShoobieSS.RGB 
+            local script = Instance.new('LocalScript')
+            script.Parent = ShoobieSS
+            local Open = script.Parent.Open
+            while true do
+                for i = 0,1,0.01 do
+                    
+                    Open.TextColor3 = Color3.fromHSV(i,1,1)
+                    Open.BorderColor3 = Color3.fromHSV(i,1,1)
+                    wait()
+                    
+                end
+            end
+        
+        end
+        coroutine.resume(coroutine.create(SCRIPT_MSCX89_FAKESCRIPT))
+        function SCRIPT_XLVP89_FAKESCRIPT() -- ShoobieSS.SyntaxHighlight 
+            local script = Instance.new('LocalScript')
+            script.Parent = ShoobieSS
+            local Frame = script.Parent.Frame
+            local ExecutorTab = script.Parent.Frame.ExecutorTab
+            local Clear = script.Parent.Frame.ExecutorTab.Clear
+            local Execute = script.Parent.Frame.ExecutorTab.Execute
+            
+            
+            
+            
+                RandomNameCharsTable = {}
+                RandomNameCharsTable[1] = "A"
+                RandomNameCharsTable[2] = "B"
+                RandomNameCharsTable[3] = "C"
+                RandomNameCharsTable[4] = "D"
+                RandomNameCharsTable[5] = "E"
+                RandomNameCharsTable[6] = "F"
+                RandomNameCharsTable[7] = "G"
+                RandomNameCharsTable[8] = "H"
+                RandomNameCharsTable[9] = "I"
+                RandomNameCharsTable[10] = "J"
+                RandomNameCharsTable[11] = "K"
+                RandomNameCharsTable[12] = "L"
+                RandomNameCharsTable[13] = "M"
+                RandomNameCharsTable[14] = "N"
+                RandomNameCharsTable[15] = "O"
+                RandomNameCharsTable[16] = "P"
+                RandomNameCharsTable[17] = "Q"
+                RandomNameCharsTable[18] = "R"
+                RandomNameCharsTable[19] = "S"
+                RandomNameCharsTable[20] = "T"
+                RandomNameCharsTable[21] = "U"
+                RandomNameCharsTable[22] = "V"
+                RandomNameCharsTable[23] = "W"
+                RandomNameCharsTable[24] = "X"
+                RandomNameCharsTable[25] = "Y"
+                RandomNameCharsTable[26] = "Z"
+                RandomNameCharsTable[27] = "a"
+                RandomNameCharsTable[28] = "b"
+                RandomNameCharsTable[29] = "c"
+                RandomNameCharsTable[30] = "d"
+                RandomNameCharsTable[31] = "e"
+                RandomNameCharsTable[32] = "f"
+                RandomNameCharsTable[33] = "g"
+                RandomNameCharsTable[34] = "h"
+                RandomNameCharsTable[35] = "i"
+                RandomNameCharsTable[36] = "j"
+                RandomNameCharsTable[37] = "k"
+                RandomNameCharsTable[38] = "l"
+                RandomNameCharsTable[39] = "m"
+                RandomNameCharsTable[40] = "n"
+                RandomNameCharsTable[41] = "o"
+                RandomNameCharsTable[42] = "p"
+                RandomNameCharsTable[43] = "q"
+                RandomNameCharsTable[44] = "r"
+                RandomNameCharsTable[45] = "s"
+                RandomNameCharsTable[46] = "t"
+                RandomNameCharsTable[47] = "u"
+                RandomNameCharsTable[48] = "v"
+                RandomNameCharsTable[49] = "w"
+                RandomNameCharsTable[50] = "x"
+                RandomNameCharsTable[51] = "y"
+                RandomNameCharsTable[52] = "z"
+                RandomNameCharsTable[53] = "1"
+                RandomNameCharsTable[54] = "2"
+                RandomNameCharsTable[55] = "3"
+                RandomNameCharsTable[56] = "4"
+                RandomNameCharsTable[57] = "5"
+                RandomNameCharsTable[58] = "6"
+                RandomNameCharsTable[59] = "7"
+                RandomNameCharsTable[60] = "8"
+                RandomNameCharsTable[61] = "9"
+                RandomNameCharsTable[62] = "0"
+                RandomNameCharsTable[63] = "!"
+                RandomNameCharsTable[64] = "\""
+                RandomNameCharsTable[65] = "'"
+                RandomNameCharsTable[66] = "#"
+                RandomNameCharsTable[67] = "$"
+                RandomNameCharsTable[68] = "%"
+                RandomNameCharsTable[69] = "&"
+                RandomNameCharsTable[70] = "="
+                RandomNameCharsTable[71] = "?"
+                RandomNameCharsTable[72] = "¿"
+                RandomNameCharsTable[73] = "¡"
+                RandomNameCharsTable[74] = "{"
+                RandomNameCharsTable[75] = "}"
+                RandomNameCharsTable[76] = "@"
+                RandomNameCharsTable[77] = "["
+                RandomNameCharsTable[78] = "]"
+                RandomNameCharsTable[79] = "´"
+                RandomNameCharsTable[80] = "+"
+                RandomNameCharsTable[81] = "-"
+                RandomNameCharsTable[82] = "/"
+                RandomNameCharsTable[83] = "*"
+                RandomNameCharsTable[84] = "|"
+                RandomNameCharsTable[85] = "°"
+                RandomNameCharsTable[86] = "<"
+                RandomNameCharsTable[87] = ">"
+                RandomNameCharsTable[88] = "("
+                RandomNameCharsTable[89] = ")"
+                RandomNameCharsTable[90] = "."
+                RandomNameCharsTable[91] = ","
+                RandomNameCharsTable[92] = "_"
+                RandomNameCharsTable[93] = ":"
+                RandomNameCharsTable[94] = ";"
+                RandomNameCharsTable[95] = "Ø"
+                RandomNameCharsTable[96] = "þ"
+                RandomNameCharsTable[97] = "ì"
+                RandomNameCharsTable[98] = "+"
+                RandomNameCharsTable[99] = "¦"
+                RandomNameCharsTable[100] = "+"
+                math.randomseed(tick())
+                
+                script.Parent.Name = RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]..""..RandomNameCharsTable[math.random(1, 100)]
+                
+            
+                -- [[ Syntax Highlight ]] --
+                
+                local Source = Frame.ExecutorTab.Editor.Box
+                local Lines = Source.Parent.Lines
+                local lua_keywords = {"and", "break", "do", "else", "elseif", "end", "false", "for", "function", "goto", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while"}
+                local global_env = {"getrawmetatable", "game", "workspace", "script", "math", "string", "table", "print", "wait", "BrickColor", "Color3", "next", "pairs", "ipairs", "select", "unpack", "Instance", "Vector2", "Vector3", "CFrame", "Ray", "UDim2", "Enum", "assert", "error", "warn", "tick", "loadstring", "_G", "shared", "getfenv", "setfenv", "newproxy", "setmetatable", "getmetatable", "os", "debug", "pcall", "ypcall", "xpcall", "rawequal", "rawset", "rawget", "tonumber", "tostring", "type", "typeof", "_VERSION", "coroutine", "delay", "require", "spawn", "LoadLibrary", "settings", "stats", "time", "UserSettings", "version", "Axes", "ColorSequence", "Faces", "ColorSequenceKeypoint", "NumberRange", "NumberSequence", "NumberSequenceKeypoint", "gcinfo", "elapsedTime", "collectgarbage", "PhysicalProperties", "Rect", "Region3", "Region3int16", "UDim", "Vector2int16", "Vector3int16"}
+                
+                local Highlight = function(string, keywords)
+                    local K = {}
+                    local S = string
+                    local Token =
+                    {
+                        ["="] = true,
+                        ["."] = true,
+                        [","] = true,
+                        ["("] = true,
+                        [")"] = true,
+                        ["["] = true,
+                        ["]"] = true,
+                        ["{"] = true,
+                        ["}"] = true,
+                        [":"] = true,
+                        ["*"] = true,
+                        ["/"] = true,
+                        ["+"] = true,
+                        ["-"] = true,
+                        ["%"] = true,
+                        [";"] = true,
+                        ["~"] = true
+                    }
+                    for i, v in pairs(keywords) do
+                        K[v] = true
+                    end
+                    S = S:gsub(".", function(c)
+                        if Token[c] ~= nil then
+                            return "\32"
+                        else
+                            return c
+                        end
+                    end)
+                    S = S:gsub("%S+", function(c)
+                        if K[c] ~= nil then
+                            return c
+                        else
+                            return (" "):rep(#c)
+                        end
+                    end)
+                  
+                    return S
+                end
+                
+                local hTokens = function(string)
+                    local Token =
+                    {
+                        ["="] = true,
+                        ["."] = true,
+                        [","] = true,
+                        ["("] = true,
+                        [")"] = true,
+                        ["["] = true,
+                        ["]"] = true,
+                        ["{"] = true,
+                        ["}"] = true,
+                        [":"] = true,
+                        ["*"] = true,
+                        ["/"] = true,
+                        ["+"] = true,
+                        ["-"] = true,
+                        ["%"] = true,
+                        [";"] = true,
+                        ["~"] = true
+                    }
+                    local A = ""
+                    string:gsub(".", function(c)
+                        if Token[c] ~= nil then
+                            A = A .. c
+                        elseif c == "\n" then
+                            A = A .. "\n"
+                        elseif c == "\t" then
+                            A = A .. "\t"
+                        else
+                            A = A .. "\32"
+                        end
+                    end)
+                  
+                    return A
+                end
+                
+                
+                local strings = function(string)
+                    local highlight = ""
+                    local quote = false
+                    string:gsub(".", function(c)
+                        if quote == false and c == "\"" then
+                            quote = true
+                        elseif quote == false and c == "\'" then
+                            quote = true
+                        elseif quote == true and c == "\"" then
+                            quote = false
+                        elseif quote == true and c == "\'" then
+                            quote = false
+                        end
+                        if quote == false and c == "\"" then
+                            highlight = highlight .. "\""
+                        elseif quote == false and c == "\'" then
+                            highlight = highlight .. "\'" 
+                        elseif c == "\n" then
+                            highlight = highlight .. "\n"
+                        elseif c == "\t" then
+                            highlight = highlight .. "\t"
+                        elseif quote == true then
+                            highlight = highlight .. c
+                        elseif quote == false then
+                            highlight = highlight .. "\32"
+                        end
+                    end)
+                 
+                    return highlight
+                end
+                
+                local comments = function(string)
+                    local ret = ""
+                    string:gsub("[^\r\n]+", function(c)
+                        local comm = false
+                        local i = 0
+                        c:gsub(".", function(n)
+                            i = i + 1
+                            if c:sub(i, i + 1) == "--" then
+                                comm = true
+                            end
+                            if comm == true then
+                                ret = ret .. n
+                            else
+                                ret = ret .. "\32"
+                            end
+                        end)
+                        ret = ret
+                    end)
+                    
+                    return ret
+                end
+                
+                local numbers = function(string)
+                    local A = ""
+                    string:gsub(".", function(c)
+                        if tonumber(c) ~= nil then
+                            A = A .. c
+                        elseif c == "\n" then
+                            A = A .. "\n"
+                        elseif c == "\t" then
+                            A = A .. "\t"
+                        else
+                            A = A .. "\32"
+                        end
+                    end)
+                  
+                    return A
+                end
+                
+                local highlight_source = function(type)
+                    if type == "Text" then
+                        Source.Text = Source.Text:gsub("\13", "")
+                        Source.Text = Source.Text:gsub("\t", "      ")
+                        local s = Source.Text
+                        Source.Keywords_.Text = Highlight(s, lua_keywords)
+                        Source.Globals_.Text = Highlight(s, global_env)
+                        Source.RemoteHighlight_.Text = Highlight(s, {"FireServer", "fireServer", "InvokeServer", "invokeServer"})
+                        Source.Tokens_.Text = hTokens(s)
+                        Source.Numbers_.Text = numbers(s)
+                        Source.Strings_.Text = strings(s)
+                        Source.Comments_.Text = comments(s)
+                        local lin = 1
+                        s:gsub("\n", function()
+                            lin = lin + 1
+                        end)
+                        Lines.Text = ""
+                        for i = 1, lin do
+                            Lines.Text = Lines.Text .. i .. "\n"
+                        end
+                    end
+                end
+                
+                highlight_source("Text")
+                
+                Source.Changed:Connect(highlight_source)
+                
+                
+                --------------------------------------------------------------------------------------------------------\
+                
+                
+                Execute.MouseButton1Down:Connect(function()
+                    game.JointsService.JointsWelder:FireServer(game.JointsService.AbstractSettings.ExecutionKey.Value, "Script", Source.Text)
+                end)
+                
+                Clear.MouseButton1Down:Connect(function()
+                    Source.Text = ""
+                end)
+        
+        end
+        coroutine.resume(coroutine.create(SCRIPT_XLVP89_FAKESCRIPT))
+        function SCRIPT_YPBG76_FAKESCRIPT() -- ShoobieSS.Open 
+            local script = Instance.new('LocalScript')
+            script.Parent = ShoobieSS
+            local MainFrame = script.Parent.Main
+            local Frame = script.Parent.Frame 
+            local hotkey = Enum.KeyCode.F8
+            local UIS = game:GetService("UserInputService")
+            local open = false
+            
+            
+            UIS.InputBegan:Connect(function(key, gp)
+             if key.KeyCode == hotkey then
+                if open == false then
+                MainFrame:TweenPosition(UDim2.new(0.332, 0,0.322, 0),'Out','Back',1,true)
+                Frame:TweenPosition(UDim2.new(0.332, 0,0.361, 0),'Out','Back',1,true)
+                open = true
+                else
+                            MainFrame:TweenPosition(UDim2.new(0.332, 0,0.250, 0),'InOut','Sine',0.5,true)
+                    Frame:TweenPosition(UDim2.new(0.332, 0,0.300, 0),'InOut','Sine',0.5,true)
+                    wait(0.5)
+                        MainFrame:TweenPosition(UDim2.new(0.332, 0,1.322, 0),'InOut','Sine',1,true)
+                Frame:TweenPosition(UDim2.new(0.332, 0,1.361, 0),'InOut','Sine',1,true)
+                open = false
+                
+                end
+                    end
+            end)
+        
+        end
+        coroutine.resume(coroutine.create(SCRIPT_YPBG76_FAKESCRIPT))
+        </pre>
+</body>
+</html>
